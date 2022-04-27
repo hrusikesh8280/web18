@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../accessing keys/common.css" /> -->
+    <style>
+        #navbar{
+            margin-bottom: 111px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><a href="backend.html">Backend</a></div>
+        <div><a href="fronted.html">Fronted</a></div>
+    </div>
+    <form id="investor">
+        <input id="imgURL" type="text" placeholder="Enter Image URL" />
+        <input id="name" type="text" placeholder="Enter investor name" />
+        <input id="role" type="text" placeholder="Enter investor role" /> 
+        <input id="companyLogo" type="text" placeholder="enter company logo url">
+        <input type="Submit">
+    </form>
+</body>
+</html>
+<script>
+      document.querySelector("#investor").addEventListener("submit", investorsFun);
+    var investorArr = [];
+    function investorsFun() {
+    event.preventDefault();
+
+    // idOfForm.idOfinput.value
+    var investorObj = {
+      investorImg: investor.imgURL.value,
+      investorName: investor.name.value,
+      investorRole: investor.role.value,
+      investorCompanyLogo: investor.companyLogo.value,
+    };
+    investorArr.push(investorObj);
+    console.log(investorArr);
+   localStorage.setItem("investor",JSON.stringify(investorArr))
+  }
+
+
+
+</script>

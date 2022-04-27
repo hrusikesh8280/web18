@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var nameObj={name:"bapun",place:"banglore"}
+    localStorage.setItem("dataobj",JSON.stringify(nameObj))
+    var output=localStorage.getItem("dataobj")
+    console.log(typeof output)
+
+    
+    var output=JSON.parse(localStorage.getItem("dataobj"))
+    console.log(typeof output)
+</script>

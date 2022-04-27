@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var arr=[1,4,6,7,9]
+    localStorage.setItem("LUCKY",arr)
+    var numbers=[2,3,5,6,2]
+    localStorage.setItem("mynumber",numbers)
+    var str=localStorage.getItem("mynumber")
+    console.log(typeof str)
+    // local storage only accept string or number
+
+    
+    // JSON method-
+    // JSON.stringify()
+    // it convert stringarry to the local storage
+    // it converts string to arry
+    var num=[12,23,54,66,82]
+    localStorage.setItem("luckynum",JSON.stringify(num))
+    var tum=JSON.parse(localStorage.getItem("luckynum"))
+    console.log(typeof tum)
+    console.log(tum)
+    var names=["Babloo","Muna","Bapun","Chinu"]
+    localStorage.setItem("stdname",JSON.stringify(names))
+    var out=JSON.parse (localStorage.getItem("stdname"))
+    console.log( out)
+</script>
